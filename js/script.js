@@ -16,7 +16,7 @@ let products = [
   {id:15, name:'Blue Lime', cat:'Juices', price:45, img:'juices/blue.jpg'},
   {id:16, name:'Dragon Fruit', cat:'Juices', price:65, img:'juices/carrot.jpg'},
   {id:17, name:'Avocado Juice', cat:'Juices', price:80, img:'juices/fresh_lime.jpg'},
-  {id:18, name:'Chikoo Juice', cat:'Juices', price:55, img:'juices/sapota.jpg'},
+  {id:18, name:'Chikoo Juice', cat:'Juices', price:65, img:'juices/sapota.jpg'},
   {id:19, name:'Lemon Soda', cat:'Juices', price:30, img:'juices/lemon_soda.jpg'},
   {id:20, name:'Guava Juice', cat:'Juices', price:50, img:'juices/beetroot.jpg'},
   {id:21, name:'Amla Juice', cat:'Juices', price:40, img:'juices/papaya.jpg'},
@@ -96,8 +96,8 @@ let products = [
   {id:69, name:'Dry Fruit Lassi', cat:'Lassi', price:60, img:'lassi/Dry Fruit Lassi.jpg'},
   {id:70, name:'Mint Lassi', cat:'Lassi', price:45, img:'lassi/Mint Lassi.jpg'},
   {id:71, name:'Carrot Lassi', cat:'Lassi', price:50, img:'lassi/Carrot Lassi.jpg'},
-  {id:179, name:'Pineapple Lassi', cat:'Lassi', price:80, img:'lassi/pinelassi.jpg'},
-  {id:180, name:'Grape Lassi', cat:'Lassi', price:80, img:'lassi/grapelassi.jpg'},
+  {id:179, name:'Pineapple Lassi', cat:'Lassi', price:60, img:'lassi/pinelassi.jpg'},
+  {id:180, name:'Grape Lassi', cat:'Lassi', price:60, img:'lassi/grapelassi.jpg'},
 
 
   // Beverages
