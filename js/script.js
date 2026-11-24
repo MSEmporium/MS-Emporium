@@ -11,7 +11,7 @@ let products = [
   {id:10, name:'Grapes Juice', cat:'Juices', price:50, img:'juices/dragon_fruit.jpg'},
   {id:11, name:'Carrot Juice', cat:'Juices', price:65, img:'juices/grape.jpg'},
   {id:12, name:'Beetroot Juice', cat:'Juices', price:60, img:'juices/guava.jpg'},
-  {id:13, name:'Lime Juice', cat:'Juices', price:25, img:'juices/butter_fruit.jpg'},
+  {id:13, name:'Lime Juice', cat:'Juices', price:25, img:'juices/Butter_fruit.jpg'},
   {id:14, name:'Red Banana', cat:'Juices', price:55, img:'juices/red_banana.jpg'},
   {id:15, name:'Blue Lime', cat:'Juices', price:45, img:'juices/blue.jpg'},
   {id:16, name:'Dragon Fruit', cat:'Juices', price:65, img:'juices/carrot.jpg'},
@@ -23,9 +23,9 @@ let products = [
   {id:22, name:'Mix Fruit', cat:'Juices', price:55, img:'juices/mix_fruit.jpg'},
   {id:23, name:'Strawberry Juice', cat:'Juices', price:60, img:'juices/strawberry.webp'},
   {id:24, name:'fig(atthi)', cat:'Juices', price:60, img:'juices/fig.jpg'},
-  {id:25, name:'Mint Lime', cat:'Juices', price:30, img:'juices/mint_lime.jpg'},
-  {id:26, name:'Pineapple Lime', cat:'Juices', price:35, img:'juices/pineapple_lime.jpg'},
-  {id:27, name:'Grape Lime', cat:'Juices', price:35, img:'juices/grape_lime.jpg'},
+  {id:25, name:'Mint Lime', cat:'Juices', price:30, img:'juices/mint lime.jpg'},
+  {id:26, name:'Pineapple Lime', cat:'Juices', price:35, img:'juices/pineapple lime.jpg'},
+  {id:27, name:'Grape Lime', cat:'Juices', price:35, img:'juices/grape lime.jpg'},
   {id:151, name:'Sweet Lemon Soda', cat:'Juices', price:35, img:'juices/sweetlemon.webp'},
   {id:152, name:'Mint Soda', cat:'Juices', price:35, img:'juices/mintsoda.webp'},
   {id:153, name:'Grape Soda', cat:'Juices', price:40, img:'juices/grapelime.webp'},
@@ -110,7 +110,7 @@ let products = [
   {id:78, name:'Pineapple Tea', cat:'Beverages', price:30, img:'beverages/pineapple tea.jpg'},
   {id:79, name:'Boost', cat:'Beverages', price:20, img:'beverages/boost.jpg'},
   {id:80, name:'Horlicks', cat:'Beverages', price:20, img:'beverages/horlicks.jpg'},
-  {id:81, name:'Elachi Tea', cat:'Beverages', price:25, img:'beverages/elachi tea.jpg'},
+  {id:81, name:'Elachi Tea', cat:'Beverages', price:25, img:'beverages/elachitea.jpg'},
   {id:82, name:'Pineapple Tea with Honey', cat:'Beverages', price:35, img:'beverages/pineapple tea honey.jpg'},
   {id:83, name:'Cold Horlicks', cat:'Beverages', price:70, img:'beverages/cold horlicks.jpg'},
   {id:84, name:'Cold Boost', cat:'Beverages', price:70, img:'beverages/cold boost.jpg'},
@@ -131,29 +131,29 @@ let products = [
   {id:93, name:'Pani Puri (6 Nos)', cat:'Chaat Items', price:25, img:'chaat items/Pani Puri.jpg'},
   {id:163, name:'Parcel Pani Puri (6 Nos)', cat:'Chaat Items', price:30, img:'chaat items/Pani Puri.jpg'},
   {id:94, name:'Chuka Puri', cat:'Chaat Items', price:30, img:'chaat items/Chuka Puri.jpg'},
-  {id:164, name:'Parcel Chuka Puri', cat:'Chaat Items', price:40, img:'chaat items/Chuka Puri.jpg'},
-  {id:95, name:'Aloo Puri', cat:'Chaat Items', price:30, img:'chaat items/Aloo puri.jpg'},
-  {id:165, name:'Parcel Aloo Puri', cat:'Chaat Items', price:40, img:'chaat items/Aloo puri.jpg'},
+  {id:164, name:'Parcel Chuka Puri', cat:'Chaat Items', price:35, img:'chaat items/Chuka Puri.jpg'},
+  {id:95, name:'Aloo Puri', cat:'Chaat Items', price:30, img:'chaat items/Aloo Puri.jpg'},
+  {id:165, name:'Parcel Aloo Puri', cat:'Chaat Items', price:35, img:'chaat items/Aloo Puri.jpg'},
   {id:96, name:'Aloo Cheese Puri', cat:'Chaat Items', price:40, img:'chaat items/Aloo Cheese Puri.jpg'},
-  {id:166, name:'Parcel Aloo Cheese Puri', cat:'Chaat Items', price:50, img:'chaat items/Aloo Cheese Puri.jpg'},
+  {id:166, name:'Parcel Aloo Cheese Puri', cat:'Chaat Items', price:45, img:'chaat items/Aloo Cheese Puri.jpg'},
   {id:97, name:'Sev Puri', cat:'Chaat Items', price:40, img:'chaat items/Sev Puri.jpg'},
-  {id:167, name:'Parcel Sev Puri', cat:'Chaat Items', price:50, img:'chaat items/Sev Puri.jpg'},
+  {id:167, name:'Parcel Sev Puri', cat:'Chaat Items', price:45, img:'chaat items/Sev Puri.jpg'},
   {id:98, name:'Dahi Puri', cat:'Chaat Items', price:70, img:'chaat items/Dahi Puri.jpg'},
-  {id:168, name:'Parcel Dahi Puri', cat:'Chaat Items', price:80, img:'chaat items/Dahi Puri.jpg'},
+  {id:168, name:'Parcel Dahi Puri', cat:'Chaat Items', price:75, img:'chaat items/Dahi Puri.jpg'},
   {id:100, name:'Pav Bhaji', cat:'Chaat Items', price:50, img:'chaat items/Pav Bhaji.jpg'},
-  {id:169, name:'Parcel Pav Bhaji', cat:'Chaat Items', price:60, img:'chaat items/Pav Bhaji.jpg'},
+  {id:169, name:'Parcel Pav Bhaji', cat:'Chaat Items', price:55, img:'chaat items/Pav Bhaji.jpg'},
   {id:101, name:'Cheese Pav Bhaji', cat:'Chaat Items', price:60, img:'chaat items/Cheese Pav Bhaji.jpg'},
-  {id:170, name:'Parcel Cheese Pav Bhaji', cat:'Chaat Items', price:70, img:'chaat items/Cheese Pav Bhaji.jpg'},
+  {id:170, name:'Parcel Cheese Pav Bhaji', cat:'Chaat Items', price:65, img:'chaat items/Cheese Pav Bhaji.jpg'},
   {id:102, name:'Bhel Puri', cat:'Chaat Items', price:60, img:'chaat items/Bhel Puri.jpg'},
-  {id:171, name:'Parcel Bhel Puri', cat:'Chaat Items', price:70, img:'chaat items/Bhel Puri.jpg'},
+  {id:171, name:'Parcel Bhel Puri', cat:'Chaat Items', price:65, img:'chaat items/Bhel Puri.jpg'},
   {id:103, name:'Murukku Sandwich', cat:'Chaat Items', price:60, img:'chaat items/Murukku Sandwich.jpg'},
-  {id:172, name:'Murukku Sandwich', cat:'Chaat Items', price:70, img:'chaat items/Murukku Sandwich.jpg'},
+  {id:172, name:'Murukku Sandwich', cat:'Chaat Items', price:65, img:'chaat items/Murukku Sandwich.jpg'},
   {id:104, name:'Cheese Murukku Sandwich', cat:'Chaat Items', price:70, img:'chaat items/Cheese Murukku Sandwich.jpg'},
-  {id:173, name:'Parcel Cheese Murukku Sandwich', cat:'Chaat Items', price:80, img:'chaat items/Cheese Murukku Sandwich.jpg'},
+  {id:173, name:'Parcel Cheese Murukku Sandwich', cat:'Chaat Items', price:75, img:'chaat items/Cheese Murukku Sandwich.jpg'},
   {id:105, name:'Khakra Sandwich', cat:'Chaat Items', price:60, img:'chaat items/Khakra Sandwich.jpg'},
-  {id:174, name:'Parcel Khakra Sandwich', cat:'Chaat Items', price:70, img:'chaat items/Khakra Sandwich.jpg'},
+  {id:174, name:'Parcel Khakra Sandwich', cat:'Chaat Items', price:65, img:'chaat items/Khakra Sandwich.jpg'},
   {id:106, name:'Cheese Khakra Sandwich', cat:'Chaat Items', price:70, img:'chaat items/Cheese Khakra Sandwich.jpg'},
-  {id:175, name:'Parcel Cheese Khakra Sandwich', cat:'Chaat Items', price:80, img:'chaat items/Cheese Khakra Sandwich.jpg'},
+  {id:175, name:'Parcel Cheese Khakra Sandwich', cat:'Chaat Items', price:75, img:'chaat items/Cheese Khakra Sandwich.jpg'},
   
   // Maggi
   {id:112, name:'Maggi', cat:'Maggi', price:50, img:'maggi/Maggi.jpg'},
@@ -168,7 +168,7 @@ let products = [
   {id:119, name:'Black Currant', cat:'Ice Cream', price:45, img:'icecream/Mango.jpg'},
   {id:120, name:'Butterscotch', cat:'Ice Cream', price:45, img:'icecream/Butterscotch.jpg'},
   {id:122, name:'Strawberry', cat:'Ice Cream', price:45, img:'icecream/Strawberry.jpg'},
-  {id:123, name:'Nuts & Ice Cream', cat:'Ice Cream', price:140, img:'icecream/nutsandice.jpg'},
+  {id:123, name:'Nuts & Ice Cream', cat:'Ice Cream', price:140, img:'icecream/Nuts & Ice Cream.jpg'},
   {id:124, name:'Mixed Ice Cream', cat:'Ice Cream', price:110, img:'icecream/Mixed Ice Cream.jpg'},
 
   // Fruit Salad
@@ -192,7 +192,7 @@ let products = [
   // Fried Items
   {id:139, name:'French Fries', cat:'Fried Items', price:75, img:'fried_items/french fries.jpg'},
   {id:140, name:'Peri Peri French Fries', cat:'Fried Items', price:85, img:'fried_items/peri peri.jpg'},
-  {id:142, name:'Cheese French Fries', cat:'Fried Items', price:100, img:'fried_items/cheese.jpg'},
+  {id:142, name:'Cheese French Fries', cat:'Fried Items', price:100, img:'fried_items/Cheese.jpg'},
   {id:143, name:'Chicken Momos Fried', cat:'Fried Items', price:100, img:'fried_items/chicken momos.jpg'},
   {id:144, name:'Veg Momos Fried', cat:'Fried Items', price:85, img:'fried_items/veg momos.jpg'},
   {id:145, name:'Chicken Kievs', cat:'Fried Items', price:95, img:'fried_items/chicken kieves.jpg'},
@@ -321,18 +321,7 @@ if(mobBox) mobBox.value = tableMobNos[t] || '';
 var modeVal = tablePayModes[t] || 'Cash';
 var modeRadio = document.querySelector('input[name="payModeHome"][value="'+modeVal+'"]');
 if(modeRadio) modeRadio.checked = true;
-  let tno=document.getElementById('tno'); if(tno)tno.value=tableLabel(t); let th=document.getElementById('tnoHome'); if(th)th.value=tableLabel(t); let b=document.getElementById('menuTableBadge'); if(b)b.textContent='Table: Table'+t.replace('T','')+' - '+tableLabel(t); renderHomeTables(); renderCart(); showPage('billing'); 
-// ✅ ADD - Idhu Dhan Mukkiyam! Alert Illama-ye Unlock Pannum!
-  document.getElementById('previewModal').style.display='none';
-  setTimeout(function(){
-    var m = document.getElementById('custMobHome');
-    if(m){ m.disabled=false; m.readOnly=false; m.style.pointerEvents='auto'; m.focus(); }
-    var o = document.getElementById('othersAmtHome');
-    if(o){ o.disabled=false; o.readOnly=false; o.style.pointerEvents='auto'; }
-    var o2 = document.getElementById('othersAmt');
-    if(o2){ o2.disabled=false; o2.readOnly=false; o2.style.pointerEvents='auto'; }
-  }, 100);
-}
+  let tno=document.getElementById('tno'); if(tno)tno.value=tableLabel(t); let th=document.getElementById('tnoHome'); if(th)th.value=tableLabel(t); let b=document.getElementById('menuTableBadge'); if(b)b.textContent='Table: Table'+t.replace('T','')+' - '+tableLabel(t); renderHomeTables(); renderCart(); showPage('billing'); }
 function showHome(){ document.getElementById('homePage').classList.remove('d-none'); document.getElementById('billingPage').classList.add('d-none'); document.getElementById('savedPage').classList.add('d-none'); renderHomeTables(); renderCart(); }
 
 updateBillNo();
@@ -747,20 +736,26 @@ var totalNameLines = 0;
   if(lines < 1) lines = 1;
   totalNameLines += lines;
 });
-var pageHeight = 100 + (totalNameLines * 9) + (itemsCount * 14) + (b.parcelCharge ? 12 : 0) + 35;
+// ✅ Thank You ku Appuram - White Space Varadhu - Exact Height!
+var pageHeight = 83 + (totalNameLines * 6) + (itemsCount * 9) + (b.parcelCharge ? 8 : 0) + 28;
+// 70 = Header + Bill info, 30 = Total + Thank You ku space
 if(pageHeight < 100) pageHeight = 100;
-if(pageHeight > 1200) pageHeight = 1200;
+if(pageHeight > 1200) pageHeight = 1200; // ✅ 10 Order-ku Mela Irundhalum - Single Page!
 
   var doc = new jsPDF({orientation:'portrait', unit:'mm', format:[58, pageHeight]});
+  // ... meedhi code ellam - dashed, leftRight, items, TOTAL, doc.save
+  // ELLAM indha try kulla dhan irukanum!
+
+       var W = 58, CX = 29, L = 2, R = 56;
     var y = 7;
-    function newPageIfNeeded(){ /* Single Page Mattum */ }
+       function newPageIfNeeded(){ /* ✅ Single Page Mattum - Pudhu Page Vendaam! */ }
     function dashed(){ doc.setFont('courier','bold'); doc.setFontSize(11); doc.text('------------------------------', CX, y, {align:'center'}); y += 5; newPageIfNeeded(); }
     function leftRight(left, right, size, bold){
   doc.setFont('courier', bold?'bold':'normal'); doc.setFontSize(size||12);
-  doc.text(left, L, y); doc.text(right, R, y, {align:'right'}); y += 7; newPageIfNeeded();
+  doc.text(left, L, y); doc.text(right, R, y, {align:'right'}); y += 7.5; newPageIfNeeded();
 }
     // ===== PREVIEW MAARIYE - Header Center =====
-    doc.setFont('courier','bold'); doc.setFontSize(20);
+    doc.setFont('courier','bold'); doc.setFontSize(22);
     doc.text('MS EMPORIUM', CX, y, {align:'center'}); y += 6;
     doc.setFont('courier','bold'); doc.setFontSize(15);
     doc.text('Juices & Snacks', CX, y, {align:'center'}); y += 4;
@@ -797,7 +792,7 @@ leftRight('Pay Mode:', b.payMode || 'Cash', 12, false);
     if(b.parcelCharge){ leftRight('Parcel Charges', 'Rs.'+b.parcelCharge, 12, true); }
     dashed();
     // TOTAL - Preview maari perusa bold
-    doc.setFont('courier','bold'); doc.setFontSize(22);
+    doc.setFont('courier','bold'); doc.setFontSize(20);
     doc.text('TOTAL', L, y); doc.text('Rs.'+b.total, R, y, {align:'right'}); y += 8;
     doc.setFont('courier','bold'); doc.setFontSize(11);
     doc.text('Thank you! Visit Again', CX, y, {align:'center'}); y += 7;
@@ -836,13 +831,7 @@ if(typeof tablePayModes !== 'undefined' && currentTable){ delete tablePayModes[c
   
   if(currentTable){ delete tableMobNos[currentTable]; delete tablePayModes[currentTable]; localStorage.setItem('ms_table_mobs', JSON.stringify(tableMobNos)); localStorage.setItem('ms_table_modes', JSON.stringify(tablePayModes)); }
   
-  pendingPrintBill=null;
-currentTable = null; // ✅ Table-a Full-a Free Pannidu - Thirumba Select Panna Mudiyum!
-updateBillNo(); renderCart(); renderSaved(); showHome(); 
-document.body.style.pointerEvents='auto';
-document.getElementById('previewModal').style.display='none';
-document.getElementById('previewModal').style.pointerEvents='auto';
-renderHomeTables();
+  pendingPrintBill=null; updateBillNo(); renderCart(); renderSaved(); showHome(); renderHomeTables(); 
 
 // ✅ COMPLETE Clear - Box Ellame Empty!
 var mb2 = document.getElementById('custMobHome'); if(mb2) mb2.value = '';
@@ -895,10 +884,9 @@ var payVal = payEl ? payEl.value : 'Cash';
   let pb=document.getElementById('previewBody');
  pb.innerHTML=`<div class="d-flex justify-content-between"><span>Bill No</span><b>${bno}</b></div><div class="d-flex justify-content-between"><span>Date</span><span>${pendingPrintBill.date}</span></div><div class="d-flex justify-content-between"><span>Table</span><b>${tno}</b></div><div class="d-flex justify-content-between"><span>Mob No</span><b>${pendingPrintBill.cusMob}</b></div><div class="d-flex justify-content-between"><span>Payment Mode</span><b>${pendingPrintBill.payMode}</b></div><hr>${pendingPrintBill.items.map(i=>`<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:4px;margin:4px 0;text-align:left"><span style="font-weight:600;flex:1">${i.name==='Others' ? 'Others' : i.name + ' x ' + i.qty}</span><span style="white-space:nowrap;padding-left:4px">Rs.${i.price*i.qty}</span></div>`).join('')}${parcel?`<div class="d-flex justify-content-between"><span>Parcel Charges</span><span>Rs.${parcel}</span></div>`:''}<hr><div class="d-flex justify-content-between fw-bold fs-5"><span>Total</span><span>Rs.${total}</span></div>`;
   document.getElementById('previewModal').style.display='flex';
-  document.getElementById('previewModal').style.pointerEvents='auto'; // ✅ ADD - Button Click Aaganum!
   return false;
 }
-function closePreview(){ document.getElementById('previewModal').style.display='none'; document.getElementById('previewModal').style.pointerEvents='auto'; pendingPrintBill=null; }
+function closePreview(){ document.getElementById('previewModal').style.display='none'; pendingPrintBill=null; }
 function confirmPrint(){
   if(!pendingPrintBill) return; let b=pendingPrintBill; document.getElementById('previewModal').style.display='none';
   bills.push(b); localStorage.setItem('ms_bills', JSON.stringify(bills));
@@ -919,13 +907,7 @@ if(typeof tablePayModes !== 'undefined' && currentTable){ delete tablePayModes[c
   if(currentTable){ delete tableMobNos[currentTable]; delete tablePayModes[currentTable]; localStorage.setItem('ms_table_mobs', JSON.stringify(tableMobNos)); localStorage.setItem('ms_table_modes', JSON.stringify(tablePayModes)); }
   
   
-  pendingPrintBill=null;
-currentTable = null; // ✅ Table-a Full-a Free Pannidu - Thirumba Select Panna Mudiyum!
-
-updateBillNo(); renderCart(); renderSaved(); showHome(); renderHomeTables();
-document.body.style.pointerEvents='auto';
-document.getElementById('previewModal').style.display='none';
-document.getElementById('previewModal').style.pointerEvents='auto';
+  pendingPrintBill=null; updateBillNo(); renderCart(); renderSaved(); showHome(); renderHomeTables(); 
   // ✅ COMPLETE Clear - Box Ellame Empty!
 var mb2 = document.getElementById('custMobHome'); if(mb2) mb2.value = '';
 var cash2 = document.querySelector('input[name="payModeHome"][value="Cash"]'); if(cash2) cash2.checked = true;
@@ -980,7 +962,7 @@ function buildReceiptHTML(b){
     + '</div>';
 }
 function clearAllData(){
-  if(!confirm('Full Clear! Everything will go is that ok?')) return;
+  if(!confirm('Full Clear! Everthing is clear is that Ok? ')) return;
   // ✅ Local Full Clear
   tableOrders={T1:[],T2:[],T3:[],T4:[],T5:[],T6:[],T7:[],T8:[],T9:[],T10:[]};
   parcelOrders={T1:0,T2:0,T3:0,T4:0,T5:0,T6:0,T7:0,T8:0,T9:0,T10:0};
@@ -990,6 +972,5 @@ function clearAllData(){
   // ✅ Sheet-um Clear - Empty Order Anuppu!
   if(typeof forceClearTableInSheet === 'function'){ var oldTable = currentTable; ['T1','T2','T3','T4','T5','T6','T7','T8','T9','T10'].forEach(function(t){ currentTable = t; forceClearTableInSheet(); }); currentTable = oldTable; }
   cart=[]; renderCart(); renderSaved(); renderHomeTables(); showHome();
-  alert('✅ Fully Cleared! Start New Order.....');
+  alert('✅ Full cleared! Start New Order....');
 }
-
