@@ -747,10 +747,10 @@ var totalNameLines = 0;
   if(lines < 1) lines = 1;
   totalNameLines += lines;
 });
-var pageHeight = 72 + (totalNameLines * 9) + (itemsCount * 7) + (b.parcelCharge ? 10 : 0) + 18;
+var pageHeight = 82 + (totalNameLines * 9) + (itemsCount * 7) + (b.parcelCharge ? 12 : 0) + 28;
 // 70 = Header + Bill info, 30 = Total + Thank You ku space
 if(pageHeight < 100) pageHeight = 100;
-if(pageHeight > 400) pageHeight = 400;
+if(pageHeight > 1200) pageHeight = 1200;
 
   var doc = new jsPDF({orientation:'portrait', unit:'mm', format:[58, pageHeight]});
   // ... meedhi code ellam - dashed, leftRight, items, TOTAL, doc.save
@@ -758,11 +758,11 @@ if(pageHeight > 400) pageHeight = 400;
 
        var W = 58, CX = 29, L = 2, R = 56;
     var y = 7;
-  
-    function dashed(){ doc.setFont('courier','bold'); doc.setFontSize(11); doc.text('------------------------------', CX, y, {align:'center'}); y += 5; }
+    function newPageIfNeeded()
+    function dashed(){ doc.setFont('courier','bold'); doc.setFontSize(11); doc.text('------------------------------', CX, y, {align:'center'}); y += 5; newPageIfNeeded(); }
     function leftRight(left, right, size, bold){
   doc.setFont('courier', bold?'bold':'normal'); doc.setFontSize(size||12);
-  doc.text(left, L, y); doc.text(right, R, y, {align:'right'}); y += 7.5; 
+  doc.text(left, L, y); doc.text(right, R, y, {align:'right'}); y += 7; newPageIfNeeded();
 }
     // ===== PREVIEW MAARIYE - Header Center =====
     doc.setFont('courier','bold'); doc.setFontSize(20);
@@ -794,7 +794,7 @@ leftRight('Pay Mode:', b.payMode || 'Cash', 12, false);
       doc.setFont('courier','bold'); doc.setFontSize(15);
       var nameLines = doc.splitTextToSize(i.name, 52);
       nameLines.forEach(function(nl){
-        doc.text(nl, L, y); y += 6;
+        doc.text(nl, L, y); y += 6; newPageIfNeeded();
       });
       leftRight('x ' + i.qty, 'Rs.' + (i.price*i.qty), 15, true);
       y += 1;
