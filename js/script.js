@@ -11,7 +11,7 @@ let products = [
   {id:10, name:'Grapes Juice', cat:'Juices', price:50, img:'juices/dragon_fruit.jpg'},
   {id:11, name:'Carrot Juice', cat:'Juices', price:65, img:'juices/grape.jpg'},
   {id:12, name:'Beetroot Juice', cat:'Juices', price:60, img:'juices/guava.jpg'},
-  {id:13, name:'Lime Juice', cat:'Juices', price:25, img:'juices/Butter_fruit.jpg'},
+  {id:13, name:'Lime Juice', cat:'Juices', price:25, img:'juices/butter_fruit.jpg'},
   {id:14, name:'Red Banana', cat:'Juices', price:55, img:'juices/red_banana.jpg'},
   {id:15, name:'Blue Lime', cat:'Juices', price:45, img:'juices/blue.jpg'},
   {id:16, name:'Dragon Fruit', cat:'Juices', price:65, img:'juices/carrot.jpg'},
@@ -23,9 +23,9 @@ let products = [
   {id:22, name:'Mix Fruit', cat:'Juices', price:55, img:'juices/mix_fruit.jpg'},
   {id:23, name:'Strawberry Juice', cat:'Juices', price:60, img:'juices/strawberry.webp'},
   {id:24, name:'fig(atthi)', cat:'Juices', price:60, img:'juices/fig.jpg'},
-  {id:25, name:'Mint Lime', cat:'Juices', price:30, img:'juices/mint lime.jpg'},
-  {id:26, name:'Pineapple Lime', cat:'Juices', price:35, img:'juices/pineapple lime.jpg'},
-  {id:27, name:'Grape Lime', cat:'Juices', price:35, img:'juices/grape lime.jpg'},
+  {id:25, name:'Mint Lime', cat:'Juices', price:30, img:'juices/mint_lime.jpg'},
+  {id:26, name:'Pineapple Lime', cat:'Juices', price:35, img:'juices/pineapple_lime.jpg'},
+  {id:27, name:'Grape Lime', cat:'Juices', price:35, img:'juices/grape_lime.jpg'},
   {id:151, name:'Sweet Lemon Soda', cat:'Juices', price:35, img:'juices/sweetlemon.webp'},
   {id:152, name:'Mint Soda', cat:'Juices', price:35, img:'juices/mintsoda.webp'},
   {id:153, name:'Grape Soda', cat:'Juices', price:40, img:'juices/grapelime.webp'},
@@ -110,7 +110,7 @@ let products = [
   {id:78, name:'Pineapple Tea', cat:'Beverages', price:30, img:'beverages/pineapple tea.jpg'},
   {id:79, name:'Boost', cat:'Beverages', price:20, img:'beverages/boost.jpg'},
   {id:80, name:'Horlicks', cat:'Beverages', price:20, img:'beverages/horlicks.jpg'},
-  {id:81, name:'Elachi Tea', cat:'Beverages', price:25, img:'beverages/elachitea.jpg'},
+  {id:81, name:'Elachi Tea', cat:'Beverages', price:25, img:'beverages/elachi tea.jpg'},
   {id:82, name:'Pineapple Tea with Honey', cat:'Beverages', price:35, img:'beverages/pineapple tea honey.jpg'},
   {id:83, name:'Cold Horlicks', cat:'Beverages', price:70, img:'beverages/cold horlicks.jpg'},
   {id:84, name:'Cold Boost', cat:'Beverages', price:70, img:'beverages/cold boost.jpg'},
@@ -165,10 +165,10 @@ let products = [
 
   // Ice Cream
   {id:118, name:'Vanilla', cat:'Ice Cream', price:40, img:'icecream/Vanilla.jpg'},
-  {id:119, name:'Black Currant', cat:'Ice Cream', price:45, img:'icecream/Mango.jpg'},
+  {id:119, name:'Chocolate', cat:'Ice Cream', price:45, img:'icecream/Chocolate.jpg'},
   {id:120, name:'Butterscotch', cat:'Ice Cream', price:45, img:'icecream/Butterscotch.jpg'},
   {id:122, name:'Strawberry', cat:'Ice Cream', price:45, img:'icecream/Strawberry.jpg'},
-  {id:123, name:'Nuts & Ice Cream', cat:'Ice Cream', price:140, img:'icecream/Nuts & Ice Cream.jpg'},
+  {id:123, name:'Nuts & Ice Cream', cat:'Ice Cream', price:140, img:'icecream/nut&ice.jpg'},
   {id:124, name:'Mixed Ice Cream', cat:'Ice Cream', price:110, img:'icecream/Mixed Ice Cream.jpg'},
 
   // Fruit Salad
@@ -192,7 +192,7 @@ let products = [
   // Fried Items
   {id:139, name:'French Fries', cat:'Fried Items', price:75, img:'fried_items/french fries.jpg'},
   {id:140, name:'Peri Peri French Fries', cat:'Fried Items', price:85, img:'fried_items/peri peri.jpg'},
-  {id:142, name:'Cheese French Fries', cat:'Fried Items', price:100, img:'fried_items/Cheese.jpg'},
+  {id:142, name:'Cheese French Fries', cat:'Fried Items', price:100, img:'fried_items/cheese.jpg'},
   {id:143, name:'Chicken Momos Fried', cat:'Fried Items', price:100, img:'fried_items/chicken momos.jpg'},
   {id:144, name:'Veg Momos Fried', cat:'Fried Items', price:85, img:'fried_items/veg momos.jpg'},
   {id:145, name:'Chicken Kievs', cat:'Fried Items', price:95, img:'fried_items/chicken kieves.jpg'},
