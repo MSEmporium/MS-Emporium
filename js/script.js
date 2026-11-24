@@ -707,15 +707,32 @@ function getBillTextForPDF(b){
 }
 
 function saveAsPDF_iOS(){
-  // Bill Details modal la irundhu varum bodhu
-  var b = pendingPrintBill;
-  if(!b){
-    // View la irundhu paakira bill - rec div la irundhu edu
-    var billEl = document.getElementById('rec');
-    if(billEl){ alert(''); }
-    return;
-  }
-  savePreviewAsPDF();
+  var billEl = document.getElementById('rec');
+  var billText = billEl.innerText;
+  const { jsPDF } = window.jspdf;
+  var docTemp = new jsPDF({orientation:'portrait', unit:'mm', format:[58,300]});
+  docTemp.setFont('courier','normal');
+  docTemp.setFontSize(9);
+  var lines = docTemp.splitTextToSize(billText, 54);
+
+  // ✅ Height-a - Content-ku Thagundha Mari Calculate Pannu - Fixed 120 Vendaam!
+  var pageHeight = (lines.length * 4) + 12;
+  if(pageHeight < 80) pageHeight = 80;
+
+  var doc = new jsPDF({orientation:'portrait', unit:'mm', format:[58, pageHeight]});
+  doc.setFont('courier','normal');
+  doc.setFontSize(9);
+  var y = 5;
+  // ❌ addPage-e Illa - Ellam ORE Page la Dhan!
+  lines.forEach(l=>{ doc.text(l,2,y); y+=4; });
+  doc.save('BILL001.pdf');
+  setTimeout(function(){
+    if(confirm('PDF Downloaded! MPrinter la PDF open panni print pannava?')){
+      var blob = doc.output('blob');
+      var file = new File([blob], 'BILL001.pdf', {type:'application/pdf'});
+      navigator.share({files:[file], title:'Bill PDF'}).catch(()=>{});
+    }
+  },500);
 }
 
 function savePreviewAsPDF(){
