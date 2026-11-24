@@ -165,7 +165,7 @@ let products = [
 
   // Ice Cream
   {id:118, name:'Vanilla', cat:'Ice Cream', price:40, img:'icecream/Vanilla.jpg'},
-  {id:119, name:'Black Currant', cat:'Ice Cream', price:45, img:'icecream/Mango.jpg'},
+  {id:119, name:'Black Currant', cat:'Ice Cream', price:45, img:'icecream/Chocolate.jpg'},
   {id:120, name:'Butterscotch', cat:'Ice Cream', price:45, img:'icecream/Butterscotch.jpg'},
   {id:122, name:'Strawberry', cat:'Ice Cream', price:45, img:'icecream/Strawberry.jpg'},
   {id:123, name:'Nuts & Ice Cream', cat:'Ice Cream', price:140, img:'icecream/nutsandice.jpg'},
