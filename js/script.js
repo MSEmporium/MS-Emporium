@@ -165,10 +165,10 @@ let products = [
 
   // Ice Cream
   {id:118, name:'Vanilla', cat:'Ice Cream', price:40, img:'icecream/Vanilla.jpg'},
-  {id:119, name:'Black Currant', cat:'Ice Cream', price:45, img:'icecream/Chocolate.jpg'},
+  {id:119, name:'Black Currant', cat:'Ice Cream', price:45, img:'icecream/Mango.jpg'},
   {id:120, name:'Butterscotch', cat:'Ice Cream', price:45, img:'icecream/Butterscotch.jpg'},
   {id:122, name:'Strawberry', cat:'Ice Cream', price:45, img:'icecream/Strawberry.jpg'},
-  {id:123, name:'Nuts & Ice Cream', cat:'Ice Cream', price:140, img:'icecream/nutandice.jpg'},
+  {id:123, name:'Nuts & Ice Cream', cat:'Ice Cream', price:140, img:'icecream/nutsandice.jpg'},
   {id:124, name:'Mixed Ice Cream', cat:'Ice Cream', price:110, img:'icecream/Mixed Ice Cream.jpg'},
 
   // Fruit Salad
@@ -747,10 +747,9 @@ var totalNameLines = 0;
   if(lines < 1) lines = 1;
   totalNameLines += lines;
 });
-var pageHeight = 72 + (totalNameLines * 9) + (itemsCount * 7) + (b.parcelCharge ? 10 : 0) + 18;
-// 70 = Header + Bill info, 30 = Total + Thank You ku space
-if(pageHeight < 100) pageHeight = 100;
-if(pageHeight > 400) pageHeight = 400;
+var pageHeight = 55 + (totalNameLines * 5) + (itemsCount * 6) + (b.parcelCharge ? 8 : 0) + 15;
+if(pageHeight < 90) pageHeight = 90;
+if(pageHeight > 300) pageHeight = 300;
 
   var doc = new jsPDF({orientation:'portrait', unit:'mm', format:[58, pageHeight]});
   // ... meedhi code ellam - dashed, leftRight, items, TOTAL, doc.save
@@ -758,11 +757,11 @@ if(pageHeight > 400) pageHeight = 400;
 
        var W = 58, CX = 29, L = 2, R = 56;
     var y = 7;
-    function newPageIfNeeded(){ if(y > pageHeight - 18){ doc.addPage([58, pageHeight]); y = 7; } }
-    function dashed(){ doc.setFont('courier','bold'); doc.setFontSize(11); doc.text('------------------------------', CX, y, {align:'center'}); y += 5; newPageIfNeeded(); }
+   
+    function dashed(){ doc.setFont('courier','bold'); doc.setFontSize(11); doc.text('------------------------------', CX, y, {align:'center'}); y += 4;}
     function leftRight(left, right, size, bold){
   doc.setFont('courier', bold?'bold':'normal'); doc.setFontSize(size||12);
-  doc.text(left, L, y); doc.text(right, R, y, {align:'right'}); y += 7.5; newPageIfNeeded();
+  doc.text(left, L, y); doc.text(right, R, y, {align:'right'}); y += 7.5;
 }
     // ===== PREVIEW MAARIYE - Header Center =====
     doc.setFont('courier','bold'); doc.setFontSize(20);
@@ -794,7 +793,7 @@ leftRight('Pay Mode:', b.payMode || 'Cash', 12, false);
       doc.setFont('courier','bold'); doc.setFontSize(15);
       var nameLines = doc.splitTextToSize(i.name, 52);
       nameLines.forEach(function(nl){
-        doc.text(nl, L, y); y += 6; newPageIfNeeded();
+        doc.text(nl, L, y); y += 5;
       });
       leftRight('x ' + i.qty, 'Rs.' + (i.price*i.qty), 15, true);
       y += 1;
@@ -807,7 +806,7 @@ leftRight('Pay Mode:', b.payMode || 'Cash', 12, false);
     doc.setFont('courier','bold'); doc.setFontSize(11);
     doc.text('Thank you! Visit Again', CX, y, {align:'center'}); y += 7;
     doc.setFont('courier','normal'); doc.setFontSize(11);
-    doc.text('********************', CX, y, {align:'center'}); y += 7.5;
+    doc.text('********************', CX, y, {align:'center'}); y += 5.5;
         var fileName = (b.billNo || 'BILL001') + '.pdf';
     // ✅ Share ku MUNNADI-ye Save - Confirm-e Illa!
     confirmPrintAfterPDF();
