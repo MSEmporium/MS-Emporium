@@ -747,8 +747,6 @@ var totalNameLines = 0;
   if(lines < 1) lines = 1;
   totalNameLines += lines;
 });
-var pageHeight = 82 + (totalNameLines * 9) + (itemsCount * 7) + (b.parcelCharge ? 12 : 0) + 28;
-// 70 = Header + Bill info, 30 = Total + Thank You ku space
 var pageHeight = 100 + (totalNameLines * 9) + (itemsCount * 14) + (b.parcelCharge ? 12 : 0) + 35;
 if(pageHeight < 100) pageHeight = 100;
 if(pageHeight > 1200) pageHeight = 1200;
