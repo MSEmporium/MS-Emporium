@@ -749,16 +749,13 @@ var totalNameLines = 0;
 });
 var pageHeight = 82 + (totalNameLines * 9) + (itemsCount * 7) + (b.parcelCharge ? 12 : 0) + 28;
 // 70 = Header + Bill info, 30 = Total + Thank You ku space
+var pageHeight = 100 + (totalNameLines * 9) + (itemsCount * 14) + (b.parcelCharge ? 12 : 0) + 35;
 if(pageHeight < 100) pageHeight = 100;
 if(pageHeight > 1200) pageHeight = 1200;
 
   var doc = new jsPDF({orientation:'portrait', unit:'mm', format:[58, pageHeight]});
-  // ... meedhi code ellam - dashed, leftRight, items, TOTAL, doc.save
-  // ELLAM indha try kulla dhan irukanum!
-
-       var W = 58, CX = 29, L = 2, R = 56;
     var y = 7;
-    function newPageIfNeeded()
+    function newPageIfNeeded(){ /* Single Page Mattum */ }
     function dashed(){ doc.setFont('courier','bold'); doc.setFontSize(11); doc.text('------------------------------', CX, y, {align:'center'}); y += 5; newPageIfNeeded(); }
     function leftRight(left, right, size, bold){
   doc.setFont('courier', bold?'bold':'normal'); doc.setFontSize(size||12);
