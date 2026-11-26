@@ -850,7 +850,7 @@ function saveOnly(){
   var mobEl = document.getElementById('custMobHome');
   var mobVal = mobEl ? mobEl.value.trim() : '';
   if(mobVal=='' || mobVal.length != 10 || isNaN(mobVal)){
-    alert('Please Enter Customer Mobile Number - 10 digit venum!');
+    alert('Please Enter Customer Mobile Number!');
     if(mobEl) mobEl.focus();
     return false;
   }
