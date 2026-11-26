@@ -4,8 +4,8 @@ let products = [
   {id:3, name:'Orange Juice', cat:'Juices', price:55, img:'juices/orange.jpg'},
   {id:4, name:'Sathukudi Juice', cat:'Juices', price:50, img:'juices/sathukudi.jpg'},
   {id:5, name:'Mango Juice', cat:'Juices', price:60, img:'juices/mango.jpg'},
-  {id:6, name:'Pomegranate Juice', cat:'Juices', price:45, img:'juices/pome.jpg'},
-  {id:7, name:'Pineapple Juice', cat:'Juices', price:35, img:'juices/pineapple.jpg'},
+  {id:6, name:'Pomegranate Juice', cat:'Juices', price:65, img:'juices/pome.jpg'},
+  {id:7, name:'Pineapple Juice', cat:'Juices', price:45, img:'juices/pineapple.jpg'},
   {id:8, name:'Papaya Juice', cat:'Juices', price:40, img:'juices/nellikkai.jpg'},
   {id:9, name:'Apple Juice', cat:'Juices', price:50, img:'juices/apple.jpg'},
   {id:10, name:'Grapes Juice', cat:'Juices', price:50, img:'juices/dragon_fruit.jpg'},
@@ -16,7 +16,7 @@ let products = [
   {id:15, name:'Blue Lime', cat:'Juices', price:45, img:'juices/blue.jpg'},
   {id:16, name:'Dragon Fruit', cat:'Juices', price:65, img:'juices/carrot.jpg'},
   {id:17, name:'Avocado Juice', cat:'Juices', price:80, img:'juices/fresh_lime.jpg'},
-  {id:18, name:'Chikoo Juice', cat:'Juices', price:65, img:'juices/sapota.jpg'},
+  {id:18, name:'Chikoo Juice', cat:'Juices', price:55, img:'juices/sapota.jpg'},
   {id:19, name:'Lemon Soda', cat:'Juices', price:30, img:'juices/lemon_soda.jpg'},
   {id:20, name:'Guava Juice', cat:'Juices', price:50, img:'juices/beetroot.jpg'},
   {id:21, name:'Amla Juice', cat:'Juices', price:40, img:'juices/papaya.jpg'},
@@ -96,8 +96,8 @@ let products = [
   {id:69, name:'Dry Fruit Lassi', cat:'Lassi', price:60, img:'lassi/Dry Fruit Lassi.jpg'},
   {id:70, name:'Mint Lassi', cat:'Lassi', price:45, img:'lassi/Mint Lassi.jpg'},
   {id:71, name:'Carrot Lassi', cat:'Lassi', price:50, img:'lassi/Carrot Lassi.jpg'},
-  {id:179, name:'Pineapple Lassi', cat:'Lassi', price:60, img:'lassi/pinelassi.jpg'},
-  {id:180, name:'Grape Lassi', cat:'Lassi', price:60, img:'lassi/grapelassi.jpg'},
+  {id:179, name:'Pineapple Lassi', cat:'Lassi', price:80, img:'lassi/pinelassi.jpg'},
+  {id:180, name:'Grape Lassi', cat:'Lassi', price:80, img:'lassi/grapelassi.jpg'},
 
 
   // Beverages
@@ -168,7 +168,7 @@ let products = [
   {id:119, name:'Chocolate', cat:'Ice Cream', price:45, img:'icecream/Chocolate.jpg'},
   {id:120, name:'Butterscotch', cat:'Ice Cream', price:45, img:'icecream/Butterscotch.jpg'},
   {id:122, name:'Strawberry', cat:'Ice Cream', price:45, img:'icecream/Strawberry.jpg'},
-  {id:123, name:'Nuts & Ice Cream', cat:'Ice Cream', price:140, img:'icecream/nutandice.jpg'},
+  {id:123, name:'Nuts & Ice Cream', cat:'Ice Cream', price:140, img:'icecream/nut&ice.jpg'},
   {id:124, name:'Mixed Ice Cream', cat:'Ice Cream', price:110, img:'icecream/Mixed Ice Cream.jpg'},
 
   // Fruit Salad
@@ -842,6 +842,56 @@ var gt2 = document.getElementById('gtHome'); if(gt2) gt2.textContent = 'Rs. 0';
   var sm=document.getElementById('successMsgHome'); if(sm){ sm.innerHTML='✅ '+b.billNo+' PDF Saved! Print the File....'; sm.style.display='block'; setTimeout(()=>sm.style.display='none',5000); }
 }
  
+function saveOnly(){
+  if(!currentTable){ alert('Please Select Table!'); showHome(); return false; }
+  if(cart.length==0){ alert('Add items first!'); return false; }
+
+  // ✅ Mob Check - Save & Print Mari-ye!
+  var mobEl = document.getElementById('custMobHome');
+  var mobVal = mobEl ? mobEl.value.trim() : '';
+  if(mobVal=='' || mobVal.length != 10 || isNaN(mobVal)){
+    alert('Please Enter Customer Mobile Number - 10 digit venum!');
+    if(mobEl) mobEl.focus();
+    return false;
+  }
+
+  var payEl = document.querySelector('input[name="payModeHome"]:checked');
+  var payVal = payEl ? payEl.value : 'Cash';
+
+  var tnoInput = document.getElementById('tno')?.value || document.getElementById('tnoHome')?.value || '';
+  var tno = tnoInput || tableLabel(currentTable) || '-';
+
+  var billDateEl = document.getElementById('billDate');
+  var billDateInput = billDateEl ? billDateEl.value : '';
+  if(!billDateInput){ alert('Select Bill Date'); return false; }
+
+  var parcel = parcelOrders[currentTable]||0;
+  var total = cart.reduce((s,c)=>s+c.price*c.qty,0)+parcel;
+  var bno = getFinalPrintBillNo();
+
+  var b = {id:Date.now(), billNo:bno, billDate:billDateInput, date:new Date().toLocaleString('en-IN'), tableNo:tno, items:JSON.parse(JSON.stringify(cart)), parcelCharge:parcel, total:total, count:cart.length, cusMob:mobVal, payMode:payVal};
+
+  // ✅ Save Mattum - Print Illa - Preview Illa!
+  bills.push(b);
+  localStorage.setItem('ms_bills', JSON.stringify(bills));
+
+  // ✅ Table-a Full-a Clear Pannidu - Save & Print Mari-ye!
+  if(currentTable){ clearedTablesAt[currentTable] = Date.now(); localStorage.setItem('ms_cleared_tables', JSON.stringify(clearedTablesAt)); }
+  tableOrders[currentTable]=[]; parcelOrders[currentTable]=0; parcelClicks[currentTable]=0; syncCart();
+  if(currentTable){ delete tableMobNos[currentTable]; delete tablePayModes[currentTable]; localStorage.setItem('ms_table_mobs', JSON.stringify(tableMobNos)); localStorage.setItem('ms_table_modes', JSON.stringify(tablePayModes)); }
+  clearBillNoForTable(currentTable);
+  currentTable = null;
+
+  updateBillNo(); renderCart(); renderSaved(); showHome(); renderHomeTables();
+
+  var mb2 = document.getElementById('custMobHome'); if(mb2) mb2.value = '';
+  var cash2 = document.querySelector('input[name="payModeHome"][value="Cash"]'); if(cash2) cash2.checked = true;
+  var ob2 = document.getElementById('othersAmtHome'); if(ob2) ob2.value = '';
+
+  var sm=document.getElementById('successMsgHome'); if(sm){ sm.innerHTML='✅ '+b.billNo+' Saved! Table: '+b.tableNo+' - Rs.'+b.total; sm.style.display='block'; setTimeout(()=>sm.style.display='none',4000); }
+  return false;
+}
+
 
 function saveAndPrint(){
   if(!currentTable){ alert('Please Select Table!'); showHome(); return false; }
